@@ -17,7 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Save chats on quit, even if the window isn't closed first ([#3387](https://github.com/nomic-ai/gpt4all/pull/3387))
 - Add chat template replacements for five new models and fix EM German Mistral ([#3393](https://github.com/nomic-ai/gpt4all/pull/3393))
 - Fix crash when entering `{{ a["foo"(` as chat template ([#3394](https://github.com/nomic-ai/gpt4all/pull/3394))
-- Sign the maintenance tool on macOS to prevent crash on Sonoma ([#3391](https://github.com/nomic-ai/gpt4all/pull/3391))
+- Sign the maintenance tool on macOS to prevent crash on Sequoia ([#3391](https://github.com/nomic-ai/gpt4all/pull/3391))
 - Jinja2Cpp: Fix operator precedence in 'not X is defined' ([#3402](https://github.com/nomic-ai/gpt4all/pull/3402))
 
 ## [3.6.1] - 2024-12-20
@@ -261,6 +261,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Fix several Vulkan resource management issues ([#2694](https://github.com/nomic-ai/gpt4all/pull/2694))
 - Fix crash/hang when some models stop generating, by showing special tokens ([#2701](https://github.com/nomic-ai/gpt4all/pull/2701))
 
+[3.7.0]: https://github.com/nomic-ai/gpt4all/compare/v3.6.1...v3.7.0
 [3.6.1]: https://github.com/nomic-ai/gpt4all/compare/v3.6.0...v3.6.1
 [3.6.0]: https://github.com/nomic-ai/gpt4all/compare/v3.5.3...v3.6.0
 [3.5.3]: https://github.com/nomic-ai/gpt4all/compare/v3.5.2...v3.5.3
