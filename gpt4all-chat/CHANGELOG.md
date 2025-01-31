@@ -4,10 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## [Unreleased]
+## [3.8.0] - 2025-01-30
 
 ### Added
 - Support DeepSeek-R1 Qwen models ([#3431](https://github.com/nomic-ai/gpt4all/pull/3431))
+- Support for think tags in the GUI ([#3440](https://github.com/nomic-ai/gpt4all/pull/3440))
+- Support specifying SHA256 hash in models3.json instead of MD5 ([#3437](https://github.com/nomic-ai/gpt4all/pull/3437))
+
+### Changed
+- Use minja instead of Jinja2Cpp for significantly improved template compatibility ([#3433](https://github.com/nomic-ai/gpt4all/pull/3433))
 
 ### Fixed
 - Fix regression while using localdocs with server API ([#3410](https://github.com/nomic-ai/gpt4all/pull/3410))
@@ -16,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Code Interpreter: Fix console.log not accepting a single string after v3.7.0 ([#3426](https://github.com/nomic-ai/gpt4all/pull/3426))
 - Fix Phi 3.1 Mini 128K Instruct template (by [@ThiloteE](https://github.com/ThiloteE) in [#3412](https://github.com/nomic-ai/gpt4all/pull/3412))
 - Don't block the gui thread for reasoning ([#3435](https://github.com/nomic-ai/gpt4all/pull/3435))
+- Fix corruption of unicode in output of reasoning models ([#3443](https://github.com/nomic-ai/gpt4all/pull/3443))
 
 ## [3.7.0] - 2025-01-21
 
@@ -277,7 +283,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Fix several Vulkan resource management issues ([#2694](https://github.com/nomic-ai/gpt4all/pull/2694))
 - Fix crash/hang when some models stop generating, by showing special tokens ([#2701](https://github.com/nomic-ai/gpt4all/pull/2701))
 
-[Unreleased]: https://github.com/nomic-ai/gpt4all/compare/v3.7.0...HEAD
+[3.8.0]: https://github.com/nomic-ai/gpt4all/compare/v3.7.0...v3.8.0
 [3.7.0]: https://github.com/nomic-ai/gpt4all/compare/v3.6.1...v3.7.0
 [3.6.1]: https://github.com/nomic-ai/gpt4all/compare/v3.6.0...v3.6.1
 [3.6.0]: https://github.com/nomic-ai/gpt4all/compare/v3.5.3...v3.6.0

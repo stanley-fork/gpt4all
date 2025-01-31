@@ -1923,12 +1923,12 @@ workflows:
     # only run on main branch tags that start with 'v' and a digit
     when:
       and:
-        - equal: [ << pipeline.git.branch >>, main ]
         - matches: { pattern: '^v\d.*', value: << pipeline.git.tag >> }
         - not:
             equal: [ << pipeline.trigger_source >>, scheduled_pipeline ]
     jobs:
-      - validate-commit-on-main
+      - validate-commit-on-main:
+          <<: *job_allow_tags
       - build-offline-chat-installer-macos:
           <<: *job_allow_tags
           context: gpt4all
@@ -2045,6 +2045,7 @@ workflows:
       - sign-offline-chat-installer-windows-arm:
           context: gpt4all
           requires:
+            - sign-hold
             - build-offline-chat-installer-windows-arm
       - build-offline-chat-installer-linux:
           context: gpt4all
@@ -2086,6 +2087,7 @@ workflows:
       - sign-online-chat-installer-windows-arm:
           context: gpt4all
           requires:
+            - sign-hold
             - build-online-chat-installer-windows-arm
       - build-online-chat-installer-linux:
           context: gpt4all
